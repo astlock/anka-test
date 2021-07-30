@@ -16,7 +16,7 @@ jobs:
           anka-run-options: "--env"
           vm-commands: |
             echo \"Starting build process on `hostname`\"
-            uname -a && \
+            sw_vers && \
             ls -la /Users/anka/Downloads
   macOS_mojave:
     runs-on: [self-hosted, macOS]
@@ -31,4 +31,4 @@ jobs:
           anka-run-options: "--env"
           vm-commands: |
             echo \"Starting build process on `hostname`\"
-            uname -a
+            sw_vers
