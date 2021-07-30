@@ -18,6 +18,3 @@ jobs:
             echo \"Starting build process on \$(hostname)\"
             uname -a && \
             ls -la /Users/anka/Downloads
-          artifact-files: |
-            log.txt
-            build/binaryfile-v1
