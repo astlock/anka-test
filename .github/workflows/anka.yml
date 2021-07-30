@@ -11,16 +11,13 @@ jobs:
         id: build
         uses: veertuinc/anka-vm-github-action@v1.3.2
         with:
-          anka-vm-template-name: "11.4"
-          anka-vm-tag-name: "vanilla+port-forward-22+brew-git"
+          anka-vm-template-name: "big-sur-test"
+          anka-vm-tag-name: "big-sur-test"
           anka-run-options: "--env"
           vm-commands: |
             echo \"Starting build process on \$(hostname)\"
-            ./build.sh && \
-            ./cleanup.sh
-          anka-cp-host-paths: |
-            ./
-            /Users/nathanpierce/cache
+            uname -a && \
+            ls -la ls -la /Users/anka/Downloads
           artifact-files: |
             log.txt
             build/binaryfile-v1
