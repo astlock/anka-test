@@ -1,7 +1,7 @@
 name: My Project's CI/CD
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 jobs:
   ios:
     runs-on: [self-hosted, macOS]
