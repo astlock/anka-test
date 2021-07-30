@@ -14,7 +14,6 @@ jobs:
           anka-vm-template-name: "big-sur-test"
           anka-vm-tag-name: "latest"
           anka-run-options: "--env"
-          anka-registry-pull-options: "sudo"
           vm-commands: |
             echo \"Starting build process on \$(hostname)\"
             uname -a && \
