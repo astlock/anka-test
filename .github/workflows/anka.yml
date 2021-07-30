@@ -13,7 +13,7 @@ jobs:
         with:
           anka-vm-template-name: "big-sur-test"
           anka-vm-tag-name: "latest"
-          anka-run-options: "--env"
+          anka-run-options: "sudo"
           anka-start-options: "sudo"
           vm-commands: |
             echo \"Starting build process on \$(hostname)\"
