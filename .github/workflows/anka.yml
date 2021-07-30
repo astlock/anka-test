@@ -12,7 +12,7 @@ jobs:
         uses: veertuinc/anka-vm-github-action@v1.3.2
         with:
           anka-vm-template-name: "big-sur-test"
-          anka-vm-tag-name: "big-sur-test"
+          anka-vm-tag-name: "latest"
           anka-run-options: "--env"
           vm-commands: |
             echo \"Starting build process on \$(hostname)\"
