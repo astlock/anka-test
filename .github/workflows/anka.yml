@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main ]
 jobs:
-  macOS:
+  macOS_big_sur:
     runs-on: [self-hosted, macOS]
     steps:
       - uses: actions/checkout@v2
@@ -17,7 +17,7 @@ jobs:
           vm-commands: |
             echo \"Starting build process on \$(hostname)\"
             uname -a && \
-            ls -la ls -la /Users/anka/Downloads
+            ls -la /Users/anka/Downloads
           artifact-files: |
             log.txt
             build/binaryfile-v1
