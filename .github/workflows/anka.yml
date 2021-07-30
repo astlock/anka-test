@@ -18,3 +18,17 @@ jobs:
             echo \"Starting build process on `hostname`\"
             uname -a && \
             ls -la /Users/anka/Downloads
+  macOS_mojave:
+    runs-on: [self-hosted, macOS]
+    steps:
+      - uses: actions/checkout@v2
+      - name: build
+        id: build
+        uses: veertuinc/anka-vm-github-action@v1.3.2
+        with:
+          anka-vm-template-name: "mojave"
+          anka-vm-tag-name: "latest"
+          anka-run-options: "--env"
+          vm-commands: |
+            echo \"Starting build process on `hostname`\"
+            uname -a
