@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main ]
 jobs:
-  ios:
+  macOS:
     runs-on: [self-hosted, macOS]
     steps:
       - uses: actions/checkout@v2
@@ -14,6 +14,7 @@ jobs:
           anka-vm-template-name: "big-sur-test"
           anka-vm-tag-name: "latest"
           anka-run-options: "--env"
+          anka-start-options: "sudo"
           vm-commands: |
             echo \"Starting build process on \$(hostname)\"
             uname -a && \
