@@ -15,6 +15,6 @@ jobs:
           anka-vm-tag-name: "latest"
           anka-run-options: "--env"
           vm-commands: |
-            echo \"Starting build process on \$(hostname)\"
+            echo \"Starting build process on `hostname`\"
             uname -a && \
             ls -la /Users/anka/Downloads
