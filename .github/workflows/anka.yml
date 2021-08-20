@@ -7,15 +7,15 @@ jobs:
     runs-on: [self-hosted, macOS]
     steps:
       - uses: actions/checkout@v2
-      - name: build
-        id: build
+      - name: first_step
+        id: first_step
         uses: veertuinc/anka-vm-github-action@v1.3.2
         with:
           anka-vm-template-name: "big-sur-test"
           anka-vm-tag-name: "latest"
           anka-run-options: "--env"
           vm-commands: |
-            echo \"Starting build process on `hostname`\"
+            echo \"First Step! Starting build process on `hostname`\"
             sw_vers
       - uses: actions/checkout@v2
       - name: second_step
@@ -26,7 +26,8 @@ jobs:
           anka-vm-tag-name: "latest"
           anka-run-options: "--env"
           vm-commands: |
-            echo \"Hello second`\"
+            echo \"Second Step! Starting build process on `hostname`\"
+            sw_vers
           
   macOS_mojave:
     runs-on: [self-hosted, macOS]
