@@ -17,7 +17,17 @@ jobs:
           vm-commands: |
             echo \"Starting build process on `hostname`\"
             sw_vers && \
-            ls -la /Users/anka/Downloads
+      - uses: actions/checkout@v2
+      - name: second_step
+        id: second_step
+        uses: veertuinc/anka-vm-github-action@v1.3.2
+        with:
+          anka-vm-template-name: "big-sur-test"
+          anka-vm-tag-name: "latest"
+          anka-run-options: "--env"
+          vm-commands: |
+            echo \"Hello second`\"
+          
   macOS_mojave:
     runs-on: [self-hosted, macOS]
     steps:
