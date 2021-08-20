@@ -16,7 +16,7 @@ jobs:
           anka-run-options: "--env"
           vm-commands: |
             echo \"Starting build process on `hostname`\"
-            sw_vers && \
+            sw_vers
       - uses: actions/checkout@v2
       - name: second_step
         id: second_step
